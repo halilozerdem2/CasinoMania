@@ -13,6 +13,8 @@ public class PlayerTouchMovement : MonoBehaviour
     [SerializeField] private FloatingJoystick joystick;
     [SerializeField] private NavMeshAgent player;
 
+    public float currentSpeed;
+
     private Finger MovementFinger;
     private Vector2 MovementAmount;
 
@@ -104,5 +106,9 @@ public class PlayerTouchMovement : MonoBehaviour
 
         player.transform.LookAt(player.transform.position + scaledMovement, Vector3.up);
         player.Move(scaledMovement);
+
+        currentSpeed = scaledMovement.magnitude / Time.deltaTime;
+
+        
     }
 }
