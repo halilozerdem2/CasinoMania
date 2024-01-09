@@ -18,8 +18,6 @@ public class AnimatorController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(playerConntroller.currentSpeed);
-
         if(playerConntroller.currentSpeed > 0)
         {
             playerAnim.SetBool("IsitMoving", true);
