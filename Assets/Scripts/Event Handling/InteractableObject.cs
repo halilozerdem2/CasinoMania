@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    private SlotBehaviour slotMachine;
+
+    private void Awake()
+    {
+        slotMachine = FindObjectOfType<SlotBehaviour>();
+    }
+
     void Start()
     {
         EventManager.Instance.onInteraction.AddListener(OnInteraction);
@@ -14,7 +21,11 @@ public class InteractableObject : MonoBehaviour
         switch (interactingObject.tag)
         {
             case "Slot":
-                Debug.Log($"Interacted with {interactingObject.name}");
+                if(slotMachine.isAvailable)
+                {
+                    StartCoroutine(slotMachine.PullTheLever());
+                    StartCoroutine(slotMachine.ColorTheScreen());
+                }
                 break;
 
             default:

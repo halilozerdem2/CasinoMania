@@ -15,7 +15,10 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     private void HandleInteraction()
     {
-        if(Physics.Raycast(transform.position, transform.forward, out hit,interactionDistance)) 
+        if(Physics.Raycast(    transform.position   , 
+                               transform.forward    , 
+                           out hit                  , 
+                               interactionDistance)  ) 
         {
             GameObject interactedObject = hit.collider.gameObject;
             EventManager.Instance.onInteraction.Invoke(interactedObject);

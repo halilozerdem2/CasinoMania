@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 5431889323428324752}
   - component: {fileID: 5431889323428324753}
   - component: {fileID: -4832535671290837715}
+  - component: {fileID: 3517790457100138997}
   m_Layer: 0
   m_Name: Machine (1)
   m_TagString: Slot
@@ -333,6 +334,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d2064b3f0ebfc34abacb82ed408ff3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3517790457100138997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431889323428324463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afaec41e282215b469f9b74e2ecd4cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leverTargetDistance: 0
+  leverMovingSpeed: 0
+  lever: {fileID: 5431889322398465121}
+  screen: {fileID: 5431889322563968636}
+  screenColors:
+  - {fileID: 2100000, guid: 600258049abdb404bba3278580e6f513, type: 2}
+  - {fileID: 2100000, guid: 62901dd4c39208c4b894c9b9d8971a7c, type: 2}
+  - {fileID: 2100000, guid: 29aa4f5255b827742b45f90e32656a16, type: 2}
+  - {fileID: 2100000, guid: 7d988d549ee570340ba7aa5c20cf81d5, type: 2}
+  - {fileID: 2100000, guid: 62ea9ecfc4dc8454984a5b5250ae0827, type: 2}
+  - {fileID: 2100000, guid: 206d7b7c1a90fa64e93c21ecf4677a89, type: 2}
+  - {fileID: 2100000, guid: 206d7b7c1a90fa64e93c21ecf4677a89, type: 2}
+  - {fileID: 2100000, guid: a3f424f3e89d56847af5ae9ac4e0cfb6, type: 2}
+  isAvailable: 0
 --- !u!1 &8749981119994097121
 GameObject:
   m_ObjectHideFlags: 0
